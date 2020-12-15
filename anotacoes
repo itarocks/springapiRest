@@ -1,0 +1,206 @@
+/usr/libexec/java_home -V
+
+/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home
+
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home'
+
+Setar o java home para o correto sdk man
+
+export JAVA_HOME='/Users/itamarrocha/.sdkman/candidates/java/current'
+
+Maven --> 
+POM - Project Object Model 
+
+
+executar o projeto empacotado-- 
+
+java -jar target/{nome do jar} 
+
+Clean --> 
+
+Limpa os arquivos --> 
+
+caminho projeto 
+
+----------Class Loader
+----------> 
+O que é injeçao  de dependencia? 
+
+Pq usar --> Baixo acoplamento
+
+---> Inversao de controle 
+
+2.10. Conhecendo o Ioc Container do Spring 
+Bean --> objetos gerenciados pelo Container do Spring
+2.11. Definindo beans com @Component
+@Component
+
+2.13
+@Configuration
+--> Definiçao de beans
+
+Inicio 30/11/2020
+
+Aulas 
+
+1.1 - Introduçao 
+
+1.3 Por que desenvolver REST APIs?
+1.4. Conhecendo o modelo de domínio do projeto do curso
+
+2.1. Por que aprender e usar Spring?
+2.2. Conhecendo o ecossistema Spring
+     Spring Boot --> Visao opinativa 
+     Servelet Container --> Fetch Jar
+     
+2.3 Spring vs Jakarta 
+
+JEE --> Baseado em especificaçoes 
+	Agora gerenciado pelo eclipse foundation
+Vendor Lock in --> 
+
+Spring ou JEE? 
+--> JEE, injeçao de dependecia --> CDI 
+
+2.4 Conhecendo o spring Boot
+	--> Spring nao gera codigo, ele apenas auto configura seus projetos
+	
+Spring Boot vs Spring MVC?
+
+Boot -> camada de abstraçao para ajudar no desenvolvimento
+
+2.5 Criando um projeto spring Boot com Spring Initializr
+
+2.6. Conhecendo o Maven e o pom.xml de um projeto Spring Boot
+
+Maven --> Ferramenta de gerenciamento de dependencia e build de projetos java
+
+comand + K --> para limpar o terminal no mac
+
+Como gerar o build do projeto? 
+
+./mvnw package
+
+./mvnw clean, limpar os arquivs da pasta target
+
+Pom.xml? 
+
+2.7 Criando um controller com Spring MVC
+
+2.8 Restart mais rapido da aplicaçao com DevTools
+
+2.9. O que é injeção de dependências?
+
+principio de inversao de controle; 
+
+IOC JAVA 
+
+2.10. Conhecendo o IoC Container do Spring
+
+BEAN --> Objetos gerenciados pelos Containers do Spring \
+
+Apliccation Context 
+
+2.11. Definindo beans com @Component
+
+bootstrap --> 
+
+2.12. Injetando dependências (beans Spring)
+
+--> Uma das formas de fazer a injeçao de dependencia é pelo construtor
+
+2.13. Usando @Configuration e @Bean para definir beans
+
+Configuration --> classe NotificacaoConfig
+Bean 
+
+2.14. Conhecendo os pontos de injeção e a anotação @Autowired
+
+Ponto de injeçoes 
+
+1) Construtor 
+
+2) Setters
+
+3) No proprio atributo 
+
+Qual usar? O ideal é usar no construtor; no atributo dificulta um pouco os testes 
+
+2.15. Dependência opcional com @Autowired
+
+@Autowired(required = false) 
+
+2.16. Ambiguidade de beans e injeção de lista de beans
+
+2.17. Desambiguação de beans com @Primary
+
+@Primary --> 
+
+2.18. Desambiguação de beans com @Qualifier
+
+@Qualifier("email")
+
+2.19. Desambiguação de beans com anotação customizada
+
+
+@Retention --> 
+
+2.20. Mudando o comportamento da aplicação com Spring Profiles
+-- Uma forma de separar componentes da aplicaçao em diferentes ambientes
+--Muito utilizado em ambiente de produçao e desenvolvimento
+
+para passar o profile por linha de comando: 
+
+java -jar projeto.jar -Dspring.profiles.actives=prod // tbem da pra fazer pela propria IDE do eclipse
+
+2.21. Criando métodos de callback do ciclo de vida dos beans 
+
+--> Todos os beans no spring possuem o ciclo de vida 
+	1) Inicializaçao
+	2) Utilizaçao
+	3) Destruiçao
+	
+Podemos implementar metodos de callback --> sao chamados pelo proprio container quando passam por determinado ciclo de vida acima 
+
+1) Com essa anotation
+
+@PostConstruct
+
+@PreDestroy 
+
+Init
+Destroy
+
+2)Da pra fazer tbem pela classe de configuraçao
+
+3) Implementando a interface InitializingBean e DisposableBean
+
+2.22. Publicando e consumindo eventos customizados
+Padrao de projeto --> Observer, diminui o acoplamento entre as classes 
+
+ApplicattionEventPublisher 
+
+Vantagens, baixo acoplamento e alta coesao 
+
+2.23. Configurando projetos Spring Boot com o application.properties
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+
+
