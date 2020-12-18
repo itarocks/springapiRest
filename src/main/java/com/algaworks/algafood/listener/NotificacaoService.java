@@ -15,8 +15,7 @@ public class NotificacaoService {
 	@TipoDoNotificador(NivelUrgencia.URGENTE)
 	@Autowired
 	private Notificador notificador;
-	
-	
+		
 	@EventListener
 	public void clienteAtivadoListener(ClienteAtivadoEvent event) {
 		

@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 import com.algaworks.algafood.di.modelo.Cliente;
 
 // Uma das formas de dizer que a classe é um component spring
-@Profile("dev")
-@TipoDoNotificador(NivelUrgencia.URGENTE)
+//@Profile("dev")
+@TipoDoNotificador(NivelUrgencia.NORMAL)
 @Component
 public class NotificadorEmailMock implements Notificador {
 	
