@@ -1,0 +1,13 @@
+02.Otimizando buscas
+
+//Retorna todas as chaves que estao dentro do Redis 
+Keys * 
+
+
+Otimizando mais buscas
+
+Permite o envio de multiplos valores
+
+MSET 
+
+Mais buscas e padrões

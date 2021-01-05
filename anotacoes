@@ -260,7 +260,114 @@ arquivo tem que estar dentro da pasta resource e precisa chamar -> import.sql
 Agregatte root --> Ler mais nisso no livro do DDD
 
 
-3.14. Conhecendo e implementando o padrão Repository
+3.14. Conhecendo e implementando o padrão Repository -- refazer essa aula
+
+Repositorio orientado a persitencia 
+
+Ele representa uma coleçao 
+
+3.15. Conhecendo e usando o Lombok
+
+Lombok -->  
+
+3.16. Desafio: Lombok e repositório de restaurantes
+
+3.17. Mapeando relacionamento com @ManyToOne
+Engine:MyISAM, correto é usar o INODB
+
+3.18. A anotação @JoinColumn
+
+3.19. Propriedade nullable de @Column e @JoinColumn
+
+3.20. Desafio: mapeando entidades
+Voltar e fazer o desafio; 
+1)Criar a entidade, fazer o mapeamento, criar o repositorio de cada agregate root; 
+
+4.0 Rest com spring 
+
+O que é Rest? 
+
+Representational State Transfer 
+
+Melhores praticas sao chamadas de constraints 
+
+Vantagens = 1.1 Separacao entre o cliente e servidor
+
+4.2. Conhecendo as constraints do REST
+
+. Cliente-Servidor
+. Stateless --> sem estado 
+. cache --> tipo um proxy 
+. interface uniforme 
+. Sistema em camadas(Ter outros servidores no meio do caminho) --> nao devem afetar o processamento da requisicao 
+. Codigo sob demanda 
+
+4.3. Diferença entre REST e RESTful
+
+Restful API segue todas as constraints 
+
+4.4. Desenvolvedores de REST APIs puristas e pragmáticos
+
+Purista vs pragmaticos 
+
+4.5. Conhecendo o protocolo HTTP
+
+4.6. Usando o protocolo HTTP
+
+4.7. Instalando e testando o Postman
+
+4.8. Entendendo o que são Recursos REST
+
+Recursos do Rest API 
+
+
+4.9. Identificando recursos REST
+
+Rest usa URI: Uniform Resource Identifier -->  é uma especie 
+
+URI vs URL --> URL é um tipo de URI
+
+Deve se referir a um substantivo 
+Usar os verbos http de acordo com as convencoes 
+
+4.10. Modelando e requisitando um Collection Resource com GET
+
+4.11. Desafio: collection resource de estados
+Muito facil esse desafio aqui 
+
+4.12. Representações de recursos e content negotiation
+
+4.13. Implementando content negotiation para retornar JSON ou XML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

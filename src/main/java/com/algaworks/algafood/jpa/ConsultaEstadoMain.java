@@ -8,9 +8,11 @@ import org.springframework.context.ApplicationContext;
 
 import com.algaworks.algafood.AlgafoodApiApplication;
 import com.algaworks.algafood.domain.model.Cozinha;
+import com.algaworks.algafood.domain.model.Estado;
 import com.algaworks.algafood.domain.repository.CozinhaRepository;
+import com.algaworks.algafood.domain.repository.EstadoRepository;
 
-public class BuscaCozinhaMain {
+public class ConsultaEstadoMain {
 	
 	public static void main(String... args) {
 		
@@ -18,12 +20,15 @@ public class BuscaCozinhaMain {
 				.web(WebApplicationType.NONE)
 				.run(args);
 		
-		CozinhaRepository cozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
+		EstadoRepository estadoRepository = applicationContext.getBean(EstadoRepository.class);
 		
-		Cozinha cozinha = cozinhaRepository.buscar(2L);
+		List<Estado> estados = estadoRepository.listar();
 		
+		for(Estado estado : estados) {
+			
+			System.out.println("o nome da cozinha + : " + estado.getNome());
+		}
 		
-		System.out.println("O Valor da cozinha é: " +  cozinha.getNome());
 		
 	
 	}
