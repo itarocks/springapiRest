@@ -339,6 +339,91 @@ Muito facil esse desafio aqui
 
 4.13. Implementando content negotiation para retornar JSON ou XML
 
+produces = MediaType.xxxx
+
+4.14. Consultando Singleton Resource com GET e @PathVariable
+
+@PathVariable
+
+4.15. Customizando as representações XML e JSON com @JsonIgnore, @JsonProperty e @JsonRootName
+
+JsonProperty: nome da propriedade que é retornado
+JsonIgnore: atributo nao é devolvido no json 
+
+4.16. Customizando a representação em XML com Wrapper e anotações do Jackson
+
+4.17. Conhecendo os métodos HTTP
+
+Idempotencia
+
+GET - Ele é usado quando e necessario obter um determinado recurso
+	  Nao pode ser usado para mudar um recurso
+	  
+Post - é usado para criar um novo recurso, envia o body no payload
+	- Nao é idempotente
+	
+Put - Forma de determinado recurso 
+	- Pode funcionar com um salvar e atualizar 
+	
+Patch - Serve para atualizar um recurso parcialmente 
+
+Delete - é considerado idempotente
+
+Head - é usado apenas para trazer um cabeçalho
+
+Options
+
+4.18. Conhecendo os códigos de status HTTP
+
+Nivel 200 a 299 
+--> Requisiçao bem sucedida 
+
+Nivel 300 - indica status de redirecionamento 
+
+Nivel 400 - Algo errado na chamada do cliente para o servidor
+
+Ou o servidor nao conseguiu processar a mensagem
+
+Nivel 500 - indica erro no servidor
+
+Algum problema do codigo ou dos servidores 
+
+
+4.19. Definindo o status da resposta HTTP com @ResponseStatus
+
+4.20. Manipulando a resposta HTTP com ResponseEntity
+
+ResponseEntity -> representa uma resposta http, pode ate ter uma instancia do objeto 
+
+4.21. Corrigindo o Status HTTP para resource inexistente
+
+4.22. Status HTTP para collection resource vazia: qual usar?
+
+4.23. Modelando e implementando a inclusão de recursos com POST
+
+@RequestBody - diz que o parametro informado vai receber o Body da requisiçao
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
