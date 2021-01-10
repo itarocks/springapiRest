@@ -403,6 +403,30 @@ ResponseEntity -> representa uma resposta http, pode ate ter uma instancia do ob
 
 @RequestBody - diz que o parametro informado vai receber o Body da requisiçao
 
+4.24. Negociando o media type do payload do POST com Content-Type
+
+4.25. Modelando e imxplementando a atualização de recursos com PUT
+
+PUT --> E considerado um metodo idempotente
+
+Forma de facilitar a copia do objeto
+BeanUtil.copyPropertie 
+
+mão é 
+
+4.26. Modelando e implementando a exclusão de recursos com DELETE
+
+O delete é um metodo IDEMPOTENTE
+
+4.27. Implementando a camada de domain services (e a importância da linguagem ubíqua)
+
+DomainService ou Serviço de dominio - é uma operacao sem estado
+
+Linguagem Ubicua - e a mesma linguaguem que é falada pelo time de negocios
+
+
+
+
 
 
 
