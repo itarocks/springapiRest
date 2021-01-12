@@ -424,6 +424,12 @@ DomainService ou Serviço de dominio - é uma operacao sem estado
 
 Linguagem Ubicua - e a mesma linguaguem que é falada pelo time de negocios
 
+4.28. Refatorando a exclusão de cozinhas para usar domain services
+
+Criaçao das classes de exceçao
+
+
+
 
 
 
