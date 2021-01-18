@@ -4,6 +4,8 @@
 
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home'
 
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home'
+
 Setar o java home para o correto sdk man
 
 export JAVA_HOME='/Users/itamarrocha/.sdkman/candidates/java/current'
@@ -427,6 +429,35 @@ Linguagem Ubicua - e a mesma linguaguem que é falada pelo time de negocios
 4.28. Refatorando a exclusão de cozinhas para usar domain services
 
 Criaçao das classes de exceçao
+
+4.30. Modelando e implementando a inclusão de recursos de restaurantes
+
+4.32. Desafio: implementando serviços REST de cidades e estados
+
+Voltar pra fazer o desafio 
+
+4.33. Analisando solução para atualização parcial de recursos com PATCH
+--Atualizaçao parcial 
+--> essa aula é muito boa, preciso ver ela novamente
+
+4.34. Finalizando a atualização parcial com a API de Reflections do Spring
+Estudar muito mais sobre reflections 
+Reflections -->  O que é? Capacidade de inspecionar objetos Java em tempo de execuçao 
+Essa aula é mostra 
+Classe Object Mapper --> 
+CampoField 
+
+4.35. Introdução ao Modelo de Maturidade de Richardson (RMM)
+Aqui entra a treta de puristas vs pragmaticos 
+
+
+
+
+
+
+
+
+
 
 
 

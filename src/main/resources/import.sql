@@ -5,5 +5,7 @@ insert into restaurante (nome,taxa_frete,cozinha_id) values ('Thai Gourmet', 10,
 insert into restaurante (nome,taxa_frete,cozinha_id) values ('Thai Delivery', 9.50 ,1);
 insert into restaurante (nome,taxa_frete,cozinha_id) values ('Tuk Tuk Comida Indiana', 15,2);
 
-insert into estado (id,nome) values (1,'Sao Paulo');
-insert into estado (id,nome) values (2,'Tocantins');
+insert into estado (id, nome) values (1, 'Sao Paulo');
+insert into estado (id , nome) values (2,'Tocantins');
+
+insert into cidade(nome, estado_id) values('Osasco', 1);
