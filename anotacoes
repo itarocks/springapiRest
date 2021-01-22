@@ -450,6 +450,124 @@ CampoField
 4.35. Introdução ao Modelo de Maturidade de Richardson (RMM)
 Aqui entra a treta de puristas vs pragmaticos 
 
+4.36. Conhecendo o nível 0 do RMM
+--> mais rudimentares 
+--> nao é considerado rest 
+
+RPC --> Remote Procedure Invocation,  chamadas de procedimentos remotos 
+POX(Plain Old XML) 
+
+nao tem nada a ver se usa json é rest 
+
+4.37. Conhecendo o nível 1 do RMM
+
+4.38. Conhecendo o nível 2 do RMM
+ o que indica é o uso dos recursos e a utilizaçao correta dos codigos https 
+ mercado em geral já considera o nivel 2 como uma api rest
+ 
+ 
+ 4.39. Conhecendo o nível 3 do RMM
+ 
+ Hateoas
+ Hypermedia, como configurar os links
+ 
+ 5.1. Implementando consultas JPQL em repositórios
+ 
+ Query Params --> 
+ 
+ 5.2. Conhecendo o projeto Spring Data JPA (SDJ)
+ 
+ --> Subprojeto do Spring 
+ 
+ 5.3. Criando um repositório com Spring Data JPA (SDJ)
+ 
+ Cria uma implementaçao em tempo de execucao 
+ 
+ 5.4. Refatorando o código do projeto para usar o repositório do SDJ
+ 
+ 5.5. Desafio: refatorando todos os repositórios para usar SDJ
+ Voltar e fazer esse desafio 
+ 
+ 5.6. Criando consultas com query methods
+ Criar as classes dessa aula
+ 
+ 5.7. Usando as keywords para definir critérios de query methods
+ Criar as classes dessa aula
+ 
+ 5.8. Conhecendo os prefixos de query methods
+ 
+ Todos os prefixos abaixo tem o mesmo funcionamento do findby
+ read 
+ get 
+ query
+ stream 
+ 
+5.9 Usando queries JPQL(Java Persistence Query Language.) customizadas com @Query
+
+Anottation @Query() e passa a consulta JPQL 
+
+5.10. Externalizando consultas JPQL para um arquivo XML
+
+5.11. Implementando um repositório SDJ customizado
+
+Jogou o metodo dentro da interface para forçar o erro de compilaçao 
+
+5.12. Implementando uma consulta dinâmica com JPQL
+
+StringUtils.hasLength 
+
+5.13. Implementando uma consulta simples com Criteria API
+?Criteria --> ajuda muitos em queries dinamicas 
+
+
+
+
+atribuiçao de parametro dinamica 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
