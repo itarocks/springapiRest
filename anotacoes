@@ -535,6 +535,19 @@ Specification encapsula uma restriçao e assim se forma uma combinaçoes de rest
 
 5.18. Criando uma fábrica de Specifications
 
+Criaçao da classe e dos metodos estaticos com lambda 
+
+5.19. Injetando o próprio repositório na implementação customizada e a anotação @Lazy
+
+--> Referencia Circular; 
+@Lazy -> so instancia ela no momento que for preciso;
+
+
+
+
+
+
+
 
 
 
