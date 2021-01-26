@@ -25,7 +25,7 @@ public class AlteracaoCozinhaMain {
 		cozinha1.setNome("Brasileira");
 		
 		
-		cozinha1 = cozinhaRepository.salvar(cozinha1);
+		cozinha1 = cozinhaRepository.save(cozinha1);
 
 		
 	

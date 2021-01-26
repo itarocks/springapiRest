@@ -519,10 +519,22 @@ StringUtils.hasLength
 5.13. Implementando uma consulta simples com Criteria API
 ?Criteria --> ajuda muitos em queries dinamicas 
 
+5.14. Adicionando restrições na cláusula where com Criteria API
 
-
+5.15. Tornando a consulta com Criteria API com filtros dinâmicos
 
 atribuiçao de parametro dinamica 
+
+
+
+5.16. Conhecendo o uso do padrão Specifications (DDD) com SDJ
+
+Specification encapsula uma restriçao e assim se forma uma combinaçoes de restricao 
+
+5.17. Implementando Specifications com SDJ
+
+5.18. Criando uma fábrica de Specifications
+
 
 
 
