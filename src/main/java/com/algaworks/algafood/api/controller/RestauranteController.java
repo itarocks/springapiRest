@@ -43,7 +43,9 @@ public class RestauranteController {
 	@GetMapping()
 	public List<Restaurante> Listar() {
 
-		return restauranteRepository.findAll();
+		List<Restaurante> restaurantes = restauranteRepository.findAll();
+		
+		return restaurantes;
 
 	}
 

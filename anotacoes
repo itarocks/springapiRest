@@ -2,9 +2,9 @@
 
 /Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/home/bin'
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home/'
 
 Setar o java home para o correto sdk man
 
@@ -541,6 +541,96 @@ Criaçao da classe e dos metodos estaticos com lambda
 
 --> Referencia Circular; 
 @Lazy -> so instancia ela no momento que for preciso;
+
+5.20. Estendendo o JpaRepository para customizar o repositório base
+Preciso montar este repositorio
+@NoRepository --> nao deve ser levada em conta para instanciaçao do objeto 
+
+6. Explorando mais do JPA e Hibernate 
+
+6.1 
+
+JsonIgnore --> exemplo do relacionamento oneToMany 
+
+6.2. Mapeando relacionamento muitos-para-muitos com @ManyToMany
+
+6.3. Analisando o impacto do relacionamento muitos-para-muitos na REST API
+
+Até que ponto vale a pena colocar tantas coisas no response do payload
+Sub Collection 
+Tomar bastante cuidado quando é adicionado uma nova propriedade 
+
+6.4. Mapeando classes incorporáveis com @Embedded e @Embeddable
+
+@Embeddable é uma classe incorporavel 
+@Embedded --> ela é do tipo incorporado, é uma parte da entidade restaurante 
+
+
+6.6. Mapeando propriedades com @CreationTimestamp e @UpdateTimestamp
+
+@CreationTimestamp --> anotaçao do Hibernate
+
+6.7. Desafio: mapeando relacionamento muitos-para-um
+
+
+6.10. Entendendo o Eager Loading
+
+Sempre que for ManyToOne --> utilizar o Eager
+
+Carregamento ancioso, nao precisa estar usando ou nao a propriedade
+
+6.11. Entendendo o Lazy Loading
+
+Many To many
+
+Carregamento preguiçoso ,  so vai acontecer quando é realmente necessario
+
+Carregamento por demanda 
+
+Restornar as consultas paginadas ;
+
+6.12. Alterando a estratégia de fetching para Lazy Loading
+
+fecth = fetchType.Lazy 
+
+Eager --> carregamento ancioso
+
+6.13. Alterando a estratégia de fetching para Eager Loading
+
+6.14. Resolvendo o Problema do N+1 com fetch join na JPQL
+
+
+7.1. Entendendo o funcionamento de um pool de conexões
+
+O que é?
+
+Grupo de conexoes!!
+
+Estado Idle 
+
+7.2. Conhecendo o Hikari: a solução padrão de pool de conexões no Spring Boot
+
+HikariCP: CP = Connections Pools 
+
+ferramenta para realizar varias chamadas simultaneas 
+
+ab -n 6 -c 2 localhost:8080/restaurantes
+
+7.3. Configurando o pool de conexões do Hikari
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
