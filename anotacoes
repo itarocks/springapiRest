@@ -617,6 +617,23 @@ ferramenta para realizar varias chamadas simultaneas
 ab -n 6 -c 2 localhost:8080/restaurantes
 
 7.3. Configurando o pool de conexões do Hikari
+--> parametros de configuracao
+
+7.4. Schema generation em produção não é uma boa prática
+
+7.5. Flyway: ferramenta de versionamento de schemas de banco de dados
+
+7.6. Adicionando o Flyway no projeto e criando a primeira migração
+
+A mesma migration executada no ambiente de desenvolvimento será executado em prod 
+
+
+
+
+
+
+
+
 
 
 

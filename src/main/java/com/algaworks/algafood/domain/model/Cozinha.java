@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-@Table(name = "tab_cozinhas")
+//@Table(name = "tab_cozinhas")
 public class Cozinha {
 
 
@@ -19,8 +19,8 @@ public class Cozinha {
 	private Long id;
 	
 	
-	@JsonProperty("titulo")
-	@Column(name = "nom_cozinha" )
+	//@JsonProperty("titulo")
+	@Column(nullable = false )
 	private String nome;
 	
 	
