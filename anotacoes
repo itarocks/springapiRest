@@ -627,6 +627,26 @@ ab -n 6 -c 2 localhost:8080/restaurantes
 
 A mesma migration executada no ambiente de desenvolvimento será executado em prod 
 
+7.8. Criando migrações complexas com remanejamento de dados
+
+Preciso voltar e ver a esta aula com calma
+
+
+7.9. Criando migração a partir de DDL gerado por schema generation
+
+7.10. Adicionando dados de testes com callback do Flyway
+Refazer essa aula e as ultimas do tema que estao faltando
+
+8.1. Introdução ao tratamento e modelagem de erros
+
+8.3. Lançando exceções do tipo ResponseStatusException
+--> Classes de dominio nao podem ter controle dos codigo https;
+
+8.5. Simplificando o código com o uso de @ResponseStatus em exceptions
+
+
+
+
 
 
 

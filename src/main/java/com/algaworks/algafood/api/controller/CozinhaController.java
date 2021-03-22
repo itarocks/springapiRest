@@ -42,30 +42,25 @@ public class CozinhaController {
 
 	@GetMapping
 	public List<Cozinha> listar() {
+		
+		System.out.println("passou na cozinha 2");
 
 		return cozinhaRepository.findAll();
 
 	}
 
-	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
-	public CozinhasXmlWrapper listarXml() {
-
-		return new CozinhasXmlWrapper(cozinhaRepository.findAll());
-
-	}
+//	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
+//	public CozinhasXmlWrapper listarXml() {
+//
+//		return new CozinhasXmlWrapper(cozinhaRepository.findAll());
+//
+//	}
 
 	@GetMapping("/{cozinhaId}")
-	public ResponseEntity<Cozinha> buscar(@PathVariable("cozinhaId") Long id) {
-
-		// Spring usa esse padrao para nao retornar null, nunca vai retornar null
-		Optional<Cozinha> cozinha = cozinhaRepository.findById(id);
-
-		if (cozinha.isPresent()) {
-			return ResponseEntity.ok(cozinha.get());
-		}
-
-		// return ResponseEntity.status(HttpStatus.OK).body(cozinha);
-		return ResponseEntity.notFound().build();
+	public Cozinha buscar(@PathVariable("cozinhaId") Long id) {
+		
+		return cadastroCozinha.buscarOuFalhar(id);
+		
 	}
 
 	@PostMapping()
@@ -75,25 +70,45 @@ public class CozinhaController {
 	}
 
 	@PutMapping("/{cozinhaId}")
-	public ResponseEntity<Cozinha> atualizar(@PathVariable("cozinhaId") Long id, @RequestBody Cozinha cozinha) {
+	public Cozinha atualizar(@PathVariable("cozinhaId") Long id, @RequestBody Cozinha cozinha) {
 
-		Optional<Cozinha> cozinhaAtual = cozinhaRepository.findById(id);
+		
+		Cozinha cozinhaAtual = cadastroCozinha.buscarOuFalhar(id);
+		
+		
+		//Optional<Cozinha> cozinhaAtual = cozinhaRepository.findById(id);
 
 		// cozinhaAtual.setNome(cozinha.getNome());
 		// Copia os valores da proprieda e joga na Atual -- Set
 
-		if (cozinhaAtual.isPresent()) {
-			BeanUtils.copyProperties(cozinha, cozinhaAtual.get(),"id");
+//		if (cozinhaAtual.isPresent()) {
+			BeanUtils.copyProperties(cozinha, cozinhaAtual,"id");
 			
-			Cozinha cozinhaSalva = cadastroCozinha.salvar(cozinhaAtual.get());
+			return cadastroCozinha.salvar(cozinhaAtual);
 
-			return ResponseEntity.ok(cozinhaSalva);
-		}
+//			return ResponseEntity.ok(cozinhaSalva);
+//		}
 
-		return ResponseEntity.notFound().build();
+	//	return ResponseEntity.notFound().build();
 
 	}
 
+	/*
+	 * @DeleteMapping("/{cozinhaId}") public ResponseEntity<?>
+	 * remover(@PathVariable("cozinhaId") Long id) {
+	 * 
+	 * try {
+	 * 
+	 * cadastroCozinha.excluir(id); return ResponseEntity.noContent().build();
+	 * 
+	 * } catch (EntidadeEmUsoException e) { return
+	 * ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage()); } catch
+	 * (EntidadeNaoEncontradaException e) { return
+	 * ResponseEntity.notFound().build(); }
+	 * 
+	 * }
+	 */
+	
 	@DeleteMapping("/{cozinhaId}")
 	public ResponseEntity<?> remover(@PathVariable("cozinhaId") Long id) {
 
