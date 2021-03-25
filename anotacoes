@@ -644,6 +644,62 @@ Refazer essa aula e as ultimas do tema que estao faltando
 
 8.5. Simplificando o código com o uso de @ResponseStatus em exceptions
 
+8.7. Analisando os impactos da refatoração
+
+8.8. Criando a exception NegocioException
+
+8.11. Desafio: lançando exceptions de granularidade fina
+
+8.12. Tratando exceções em nível de controlador com @ExceptionHandler
+
+Tratar exceçoes dentro do proprio controlador 
+
+8.13. Tratando exceções globais com @ExceptionHandler e @ControllerAdvice
+
+8.14. Desafio: implementando exception handler
+
+8.15. Criando um exception handler global com ResponseEntityExceptionHandler
+
+
+8.16. Customizando o corpo da resposta padrão de ResponseEntityExceptionHandler
+
+
+8.17. Conhecendo a RFC 7807 (Problem Details for HTTP APIs)
+
+Internet Engineering Task Force(IETF)
+
+Podemos expor os detalhes internos do erro, como a stacktrace?
+
+Beneficios --> Formado unico para descrever os erros das APIs 
+
+
+8.18. Padronizando o formato de problemas no corpo de respostas com a RFC 7807
+
+Include Non Null 
+
+voltar e fazer essa aula meu bom
+
+8.19. Desafio: usando o formato de problemas no corpo de respostas
+
+8.21. Tratando a exception InvalidFormatException na desserialização
+
+Depedencia org.apache.commons
+
+Preciso criar as entidades especificas para cada classe 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
