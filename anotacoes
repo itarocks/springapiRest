@@ -687,6 +687,31 @@ Depedencia org.apache.commons
 
 Preciso criar as entidades especificas para cada classe 
 
+8.22. Habilitando erros na desserialização de propriedades inexistentes ou ignoradas
+
+propriedade --> spring.jackson.deserialization.fail-on-unknow
+
+8.23. Desafio: tratando a PropertyBindingException na desserialização
+
+control + shift + t -> consigo pesquisar as propriedades dos tipos, como exemplo as execeptions
+
+8.24. Lançando exception de desserialização na atualização parcial (PATCH)
+
+
+
+8.25. Desafio: tratando exception de parâmetro de URL inválido
+
+8.26. Desafio: tratando a exceção NoHandlerFoundException
+
+nova configuracao no appliccation properties
+
+8.27. Desafio: tratando outras exceções não capturadas
+
+8.28. Estendendo o formato do problema para adicionar novas propriedades
+--> Essa aula é legal, mensagem direcionada para o usuario 
+
+9.1. Validação do modelo com Bean Validation
+
 
 
 
