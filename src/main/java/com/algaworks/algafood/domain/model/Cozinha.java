@@ -6,24 +6,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
+import com.algaworks.algafood.Groups;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 //@Table(name = "tab_cozinhas")
 public class Cozinha {
-
-
+	
+	
+	
+	@NotNull(groups = Groups.CozinhaId.class)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	
-	//@JsonProperty("titulo")
-	@Column(nullable = false )
+
+	// @JsonProperty("titulo")
+	@Column(nullable = false)
 	private String nome;
-	
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -39,7 +41,7 @@ public class Cozinha {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -64,8 +66,5 @@ public class Cozinha {
 			return false;
 		return true;
 	}
-
-	
-	
 
 }

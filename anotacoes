@@ -712,6 +712,37 @@ nova configuracao no appliccation properties
 
 9.1. Validação do modelo com Bean Validation
 
+É uma especificao como se fosse o JPA example 
+
+-- Jakarta, bean validation
+
+9.2. Adicionando constraints e validando no controller com @Valid
+
+9.4. Estendendo o Problem Details para adicionar as propriedades com constraints violadas
+
+Binding Result 
+
+9.5. Conhecendo e adicionando mais constraints de validação no modelo
+
+9.6. Validando as associações de uma entidade em cascata
+
+
+--> por padrao o bean validation nao valida por cascata, a nao ser que seja especificado; 
+
+@Valid, valida todas as propriedades do objeto 
+
+9.7. Agrupando e restringindo constraints que devem ser usadas na validação
+
+Criar grupos de validaçoes --> voltar e fazer essa aula 
+
+@Validated 
+
+9.8. Convertendo grupos de constraints para validação em cascata com @ConvertGroup
+
+Anotacoes convert grupo 
+
+9.9. Desafio: adicionando constraints de validação no modelo
+
 
 
 

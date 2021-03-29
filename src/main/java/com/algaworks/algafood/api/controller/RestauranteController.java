@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ReflectionUtils;
@@ -44,7 +46,7 @@ public class RestauranteController {
 	public List<Restaurante> Listar() {
 
 		List<Restaurante> restaurantes = restauranteRepository.findAll();
-		
+
 		return restaurantes;
 
 	}
@@ -66,7 +68,7 @@ public class RestauranteController {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	// ? aceita o retorno de qualquer tipo
-	public ResponseEntity<?> adicionar(@RequestBody Restaurante restaurante) {
+	public ResponseEntity<?> adicionar(@RequestBody @Valid Restaurante restaurante) {
 		try {
 			restaurante = cadastroRestaurante.salvar(restaurante);
 			return ResponseEntity.status(HttpStatus.CREATED).body(restaurante);
@@ -83,7 +85,7 @@ public class RestauranteController {
 		try {
 			Optional<Restaurante> restauranteAtual = restauranteRepository.findById(restauranteId);
 
-			if (! restauranteAtual.isPresent()) {
+			if (!restauranteAtual.isPresent()) {
 
 				return ResponseEntity.notFound().build();
 
@@ -94,9 +96,9 @@ public class RestauranteController {
 			BeanUtils.copyProperties(restaurante, restauranteAtual, "id");
 
 			Restaurante restauranteParaAtualizar = restauranteAtual.get();
-			
+
 			cadastroRestaurante.salvar(restauranteParaAtualizar);
-			
+
 			return ResponseEntity.ok(restauranteAtual);
 
 		} catch (EntidadeNaoEncontradaException e) {
@@ -111,12 +113,12 @@ public class RestauranteController {
 
 		Optional<Restaurante> restauranteAtual = restauranteRepository.findById(restauranteId);
 
-		if (! restauranteAtual.isPresent()) {
+		if (!restauranteAtual.isPresent()) {
 
 			return ResponseEntity.notFound().build();
 
 		}
-		
+
 		Restaurante restauranteParaAtualizar = restauranteAtual.get();
 
 		merge(campos, restauranteParaAtualizar);
