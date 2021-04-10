@@ -32,6 +32,8 @@ Pq usar --> Baixo acoplamento
 
 ---> Inversao de controle 
 
+
+
 2.10. Conhecendo o Ioc Container do Spring 
 Bean --> objetos gerenciados pelo Container do Spring
 2.11. Definindo beans com @Component
@@ -742,6 +744,104 @@ Criar grupos de validaçoes --> voltar e fazer essa aula
 Anotacoes convert grupo 
 
 9.9. Desafio: adicionando constraints de validação no modelo
+
+control + shift + o, serve para importar automaticamente as classes no Eclipse 
+
+Voltar depois no desafio 
+
+9.10. Customizando mensagens de validação na anotação da constraint
+
+	@NotBlank(message = "Nome é obrigatorio") --> colocou a mensagem direto na entidade
+	
+9.11. Customizando e resolvendo mensagens de validação globais em Resource Bundle
+
+
+
+9.11. Customizando e resolvendo mensagens de validação globais em Resource Bundle
+
+9.12. Desafio: customizando mensagens de validação
+
+
+
+9.13. Resolvendo mensagens de validação com Resource Bundle do Bean Validation
+--Hibernate validation --> 
+
+Messages.properties do spring ele acontece depois, dessa forma tem mais prioridade 
+
+9.14. Usando o Resource Bundle do Spring como Resource Bundle do Bean Validation
+
+Juntar os dois arquivos validationMessages + messages.properties
+
+9.15. Criando constraints de validação customizadas usando composição
+
+9.16. Criando constraints de validação customizadas com implementação de ConstraintValidator
+
+9.17. Criando constraints de validação customizadas em nível de classe
+
+--> Validaçoes em nivel de classe 
+
+
+9.18. Ajustando Exception Handler para adicionar mensagens de validação em nível de classe
+
+Preciso voltar e terminar essas aulas aqui
+
+10.1. Introdução aos Testes de Integração e Testes de APIs
+
+10.2. Preparando o projeto para testes de integração
+
+10.3. Criando e rodando um teste de integração com Spring Boot, JUnit e AssertJ
+
+10.4. Escrevendo bons nomes de testes
+
+10.5. Desafio: escrevendo testes de integração
+
+10.6. Rodando os testes pelo Maven
+
+./mvnw test 
+
+./mvnw clean package --> se o teste falha nao gera o pacote 
+
+10.7. Configurando Maven Failsafe Plugin no projeto
+
+classe deve terminar com o sufixo IT - Integration Test 
+
+./mvnw verify --> esse comando executa os testes de integraçao 
+
+10.8. Implementando Testes de API com REST Assured e validando o código de status HTTP
+
+10.9. Validando o corpo da resposta HTTP
+
+Matchers --> encontrar regras de correspondencias 
+
+10.10. Criando um método para fazer setup dos testes
+
+Metodos de Callback 
+
+10.11. Entendendo o problema da ordem de execução dos testes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

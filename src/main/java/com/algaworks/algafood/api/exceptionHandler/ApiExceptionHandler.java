@@ -7,6 +7,9 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.TypeMismatchException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +23,6 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.algaworks.algafood.api.exceptionHandler.Problema.Campos;
-
 import com.algaworks.algafood.domain.exception.EntidadeEmUsoException;
 import com.algaworks.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.algaworks.algafood.domain.exception.NegocioException;
@@ -29,8 +31,13 @@ import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.PropertyBindingException;
 
 @ControllerAdvice
+
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
+	
+	@Autowired
+	private MessageSource messagesource;
+	
 	private ResponseEntity<Object> handleInvalidFormat(InvalidFormatException ex, HttpHeaders headers,
 			HttpStatus status, WebRequest request) {
 
@@ -94,7 +101,9 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 		ProblemType problemType = ProblemType.DADOS_INVALIDOS;
 
 		List<Campos> problemFields = bindingResults.getFieldErrors().stream()
-				.map(fieldError -> new Campos(fieldError.getField(), fieldError.getDefaultMessage()))
+				.map(fieldError -> {				
+				String message = messagesource.getMessage(fieldError, LocaleContextHolder.getLocale());
+				return new Campos(fieldError.getField(), message);})
 				.collect(Collectors.toList());
 
 		for (Campos campo : problemFields) {
