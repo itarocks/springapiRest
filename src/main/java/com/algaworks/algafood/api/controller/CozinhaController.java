@@ -6,6 +6,9 @@ import javax.validation.Valid;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,8 +42,25 @@ public class CozinhaController {
 	@GetMapping
 	public List<Cozinha> listar() {
 		
-		System.out.println("passou na cozinha 2");
+	//	System.out.println("passou na cozinha 2");
+		
+      Cozinha cozinha =  new Cozinha();
+		
+	//	cozinha.setNome("Asiatica");
+      
+    //  ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase().withMatcher(cozinha.getNome() , match -> match.contains().ignoreCase());
+	
+		
+	  //  Example<Cozinha> example = Example.of(cozinha,ExampleMatcher.matching().withIgnoreCase().withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING));
 
+	//	Example<Cozinha> example = Example.of(cozinha);
+		
+	  //  return cozinhaRepository.findAll(example);
+		
+	//	return cozinhaRepository.findAll((Sort) example);
+		
+		
+		
 		return cozinhaRepository.findAll();
 
 	}

@@ -805,6 +805,8 @@ Preciso voltar e terminar essas aulas aqui
 
 classe deve terminar com o sufixo IT - Integration Test 
 
+./mvnw test
+
 ./mvnw verify --> esse comando executa os testes de integraçao 
 
 10.8. Implementando Testes de API com REST Assured e validando o código de status HTTP
@@ -817,7 +819,26 @@ Matchers --> encontrar regras de correspondencias
 
 Metodos de Callback 
 
-10.11. Entendendo o problema da ordem de execução dos testes
+10.11. Entendendo o problema da ordem de execução dos Testes
+--> Um teste nao pode depender da execuçao de um outro teste
+
+10.12. Voltando o estado inicial do banco de dados para cada execução de teste com callback do Flyway
+
+Voltar na aula que foi criada o arquivo afterMigrate.sql
+
+10.13. Configurando um banco de testes e usando @TestPropertySource
+
+Criaçao da pasta resources em tests 
+
+
+10.14. Limpando e populando o banco de dados de teste
+
+Voltar na aula e fazer as coisas 
+
+10.15. Testando endpoint passando parâmetro de URL
+
+
+
 
 
 
