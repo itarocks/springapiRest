@@ -1,4 +1,4 @@
-package com.algaworsk.algafood;
+package com.algaworks.algafood;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -17,7 +17,7 @@ import com.algaworks.algafood.domain.service.CadastroCozinhaService;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = AlgafoodApiApplication.class)
 @TestPropertySource("application-test.properties")
-public class CadastroCozinhaIT {
+public class Cadastro_old {
 	
 	
 	@Autowired

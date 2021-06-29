@@ -838,6 +838,22 @@ Voltar na aula e fazer as coisas
 10.15. Testando endpoint passando parâmetro de URL
 
 
+10.17. Desafio: escrevendo testes de API
+
+Voltar nesse desafio depois 
+
+11.1. Analisando e definindo melhor o escopo das transações
+
+é uma boa pratica anotar todos os metodos publicos que realizam uma alteraçao no banco de dados 
+
+11.2. Refinando o payload de cadastro com @JsonIgnoreProperties
+
+
+
+
+
+
+
 
 
 

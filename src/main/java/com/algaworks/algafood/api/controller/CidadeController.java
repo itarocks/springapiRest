@@ -62,4 +62,12 @@ public class CidadeController {
 		cadastroCidade.excluir(cidadeId);
 		
 	}
+	
+	@GetMapping("/{cidadeId}")
+	public Cidade buscar(@PathVariable("cidadeId") Long id) {
+		
+		return cadastroCidade.buscarOuFalhar(id);
+		
+	}
+
 }

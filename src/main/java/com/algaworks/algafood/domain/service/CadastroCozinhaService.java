@@ -15,6 +15,7 @@ public class CadastroCozinhaService {
 
 	private static final String MSG_COZINHA_USO = "Cozinha de codigo %d nao pode ser removida esta em uso";
 	private static final String MSG_COZINHA_NAO_ENCONTRADA = "Nao existe um cadastro com codigo %d";
+
 	@Autowired
 	private CozinhaRepository cozinhaRepository;
 
@@ -23,22 +24,21 @@ public class CadastroCozinhaService {
 		return cozinhaRepository.save(cozinha);
 
 	}
-	
+
 	public void excluir(Long cozinhaId) {
 		try {
-		cozinhaRepository.deleteById((cozinhaId));
-		}catch(EmptyResultDataAccessException e) {
-			throw new EntidadeNaoEncontradaException(
-					String.format(MSG_COZINHA_NAO_ENCONTRADA, cozinhaId));
-		}catch(DataIntegrityViolationException e) {
-			throw new EntidadeEmUsoException(
-					String.format(MSG_COZINHA_USO, cozinhaId));
+			cozinhaRepository.deleteById((cozinhaId));
+		} catch (EmptyResultDataAccessException e) {
+			throw new EntidadeNaoEncontradaException(String.format(MSG_COZINHA_NAO_ENCONTRADA, cozinhaId));
+		} catch (DataIntegrityViolationException e) {
+			throw new EntidadeEmUsoException(String.format(MSG_COZINHA_USO, cozinhaId));
 		}
 	}
-	
+
 	public Cozinha buscarOuFalhar(Long cozinhaId) {
-		
-		return cozinhaRepository.findById(cozinhaId).orElseThrow(() -> new EntidadeNaoEncontradaException(String.format(MSG_COZINHA_NAO_ENCONTRADA, cozinhaId)));
+
+		return cozinhaRepository.findById(cozinhaId).orElseThrow(
+				() -> new EntidadeNaoEncontradaException(String.format(MSG_COZINHA_NAO_ENCONTRADA, cozinhaId)));
 	}
 
 }
