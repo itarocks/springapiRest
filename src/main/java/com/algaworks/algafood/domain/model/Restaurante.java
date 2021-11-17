@@ -44,6 +44,7 @@ public class Restaurante {
 	@Column(nullable = false)
 	private String nome;
 
+	@NotNull
 	// @PositiveOrZero(groups = Groups.CadastroRestaurante.class)
 	@PositiveOrZero
 	//@TaxaFrete
