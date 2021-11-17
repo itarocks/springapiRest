@@ -848,6 +848,97 @@ Voltar nesse desafio depois
 
 11.2. Refinando o payload de cadastro com @JsonIgnoreProperties
 
+11.3. Criando classes de mixin para usar as anotações do Jackson
+
+Mixin o que é? 
+
+É uma classe que possui membros de uma outra classe original 
+
+11.4
+
+Fazer esse desafio 
+
+11.5. Antes de estudar sobre data/hora: relembrando as aulas de geografia e entendendo os fusos horários
+
+offset
+
+UTC é um padrao de horario universal, usando relogios atomicos de alta precisao 
+
+11.6. Boas práticas para trabalhar com data e hora em REST APIs
+
+ - 5 leis para trabalhar com datas 
+  1) ISO-8601
+  2) Aceite qualquer fuso horario 
+  3) Armazene em UTC
+  4) Retorne em UTC 
+  5) Nao inclua o horario, se nao for necessário 
+  
+11.7. Configurando e refatorando o projeto para usar UTC
+
+Tipo offsetDateTime 
+
+11.8 Desafio 
+
+Voltar e fazer esse desafio
+
+11.9 Isolando o Domain Model do Representation Model com o padrao DTO 
+
+DTO --> Data transfer object 
+
+--> Classes de transferencias de dados 
+
+Quando usar o DTO?
+
+11.10. Implementando a conversão de entidade para DTO
+
+11.11. Criando DTOs para entrada de dados na API
+
+11.12. Refatorando e criando um assembler de DTO
+
+11.13. Desafio: Refatorando e criando um disassembler do DTO
+
+--> Voltar depois e fazer esse desafio
+
+11.14. Adicionando e usando o ModelMapper
+
+O que é ? Faz o mapeamento de objetos e a transformaçao de um modelo para o outro 
+
+11.15. Entendendo a estratégia padrão do ModelMapper para correspondência de propriedades
+
+Possui algumas estrategias de mapper? 
+
+Match --> 
+
+11.16. Customizando o mapeamento de propriedades com ModelMapper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -2,6 +2,7 @@ package com.algaworks.algafood.domain.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,9 +26,9 @@ import javax.validation.groups.Default;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.algawords.algafood.core.validation.TaxaFrete;
 import com.algaworks.algafood.Groups;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Restaurante {
@@ -49,6 +50,7 @@ public class Restaurante {
 	@Column(name = "taxa_frete")
 	private BigDecimal taxaFrete;
 
+	
 	@Valid
 	@ConvertGroup(from = Default.class, to = Groups.CozinhaId.class)
 	@NotNull
@@ -56,21 +58,19 @@ public class Restaurante {
 	@JoinColumn(name = "cozinha_id", nullable = false)
 	private Cozinha cozinha;
 
-	@JsonIgnore
+
 	@Embedded
 	private Endereco endereco;
 
-	@JsonIgnore
 	@ManyToMany
 	@JoinTable(name = "restaurante_forma_pagamento", joinColumns = @JoinColumn(name = "restaurante_id"), inverseJoinColumns = @JoinColumn(name = "forma_pagamento_id"))
 	private List<FormaPagamento> formasPagamento = new ArrayList<>();
 
-	@JsonIgnore
 	@CreationTimestamp
 	@Column(nullable = false, columnDefinition = "datetime")
-	private LocalDateTime dataCadastro;
+	//private LocalDateTime dataCadastro;
+	private OffsetDateTime dataCadastro;
 
-	@JsonIgnore
 	@UpdateTimestamp
 	@Column(nullable = false, columnDefinition = "datetime")
 	private LocalDateTime dataAtualizacao;
@@ -91,11 +91,11 @@ public class Restaurante {
 		this.formasPagamento = formasPagamento;
 	}
 
-	public LocalDateTime getDataCadastro() {
+	public OffsetDateTime getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(LocalDateTime dataCadastro) {
+	public void setDataCadastro(OffsetDateTime dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 
