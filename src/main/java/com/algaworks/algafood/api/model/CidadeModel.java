@@ -1,14 +1,15 @@
 package com.algaworks.algafood.api.model;
 
-import com.algaworks.algafood.api.model.view.RestauranteView;
-import com.fasterxml.jackson.annotation.JsonView;
+import com.algaworks.algafood.domain.model.Estado;
 
-public class CozinhaModel {
+public class CidadeModel {
 
-	@JsonView(RestauranteView.Resumo.class)
+	
 	private Long id;
-	@JsonView(RestauranteView.Resumo.class)
-	private String nome;
+	
+	private String nome; 
+	
+	private Estado estado;
 
 	public Long getId() {
 		return id;
@@ -26,4 +27,13 @@ public class CozinhaModel {
 		this.nome = nome;
 	}
 
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+	
+	
 }

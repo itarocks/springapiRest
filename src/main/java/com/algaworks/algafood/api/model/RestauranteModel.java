@@ -2,15 +2,34 @@ package com.algaworks.algafood.api.model;
 
 import java.math.BigDecimal;
 
+import com.algaworks.algafood.api.model.view.RestauranteView;
+import com.fasterxml.jackson.annotation.JsonView;
+
 public class RestauranteModel {
 
+	
+	
+	@JsonView({RestauranteView.Resumo.class, RestauranteView.ApenasNome.class})
 	private Long id;
 
+	@JsonView({RestauranteView.Resumo.class, RestauranteView.ApenasNome.class})
 	private String nome;
 
+	@JsonView(RestauranteView.Resumo.class)
 	private BigDecimal taxafrete;
 
+	@JsonView(RestauranteView.Resumo.class)
 	private CozinhaModel cozinha;
+	
+	private EnderecoModel endereco;
+
+	public EnderecoModel getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(EnderecoModel endereco) {
+		this.endereco = endereco;
+	}
 
 	public Long getId() {
 		return id;

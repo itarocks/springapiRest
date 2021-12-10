@@ -911,6 +911,63 @@ Match -->
 
 11.16. Customizando o mapeamento de propriedades com ModelMapper
 
+11.17. Mapeando para uma instância destino (e não um tipo) com ModelMapper
+
+11.18. Revisando e ajustando as mensagens de validação com o uso de DTOs
+
+11.19. Estratégias de nomes de propriedades: snake case vs lower camel case
+
+Snack case 
+
+11.20. Desafio: usando DTOs como representation model
+
+flush--> Executa as operaçoes do JPA que estao na fila para serem processadas 
+
+12.1. Modelando sub-recursos para relacionamentos
+
+Sub - Recursos 
+
+12.2. Granularidade de recursos: Chatty vs Chunky APIs
+
+Chatty -- varias chamadas pra incluir algo, como exemplo um novo restaurante
+
+Chunk apis  --> pedaço grande 
+
+Granularidade Fina vs Granularidade Grossa 
+
+Fazer essa aula novamente 
+
+12.3. Modelando conceitos abstratos de negócio e ações não-CRUD como recursos
+
+Fazer essa aula novamente 
+
+
+12.7. Refatorando serviço de cadastro de restaurante para incluir endereço
+
+
+13.1. Fazendo projeção de recursos com @JsonView do Jackson
+
+--> MappingJacksonValue é uma classe wrapper 
+
+DTO ou JsonView 
+
+13.2. Limitando os campos retornados pela API com @JsonFilter do Jackson
+
+--> JsonFilter --> filtrar propriedades da classe na serializaçao do Objeto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
