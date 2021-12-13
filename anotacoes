@@ -955,7 +955,9 @@ DTO ou JsonView
 
 --> JsonFilter --> filtrar propriedades da classe na serializaçao do Objeto
 
+13.3. Limitando os campos retornados pela API com Squiggly
 
+É uma biblioteca de terceiro 
 
 
 

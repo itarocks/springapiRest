@@ -72,53 +72,55 @@ public class RestauranteController {
 	 * }
 	 */
 
-	/*
-	 * @JsonView(RestauranteView.Resumo.class)
-	 * 
-	 * @GetMapping() public List<RestauranteModel> listar() {
-	 * 
-	 * // List<Restaurante> restaurantes = restauranteRepository.findAll();
-	 * 
-	 * return toCollectionModel(restauranteRepository.findAll());
-	 * 
-	 * }
-	 * 
-	 * @JsonView(RestauranteView.ApenasNome.class)
-	 * 
-	 * @GetMapping(params = "projecao=apenas-nome") public List<RestauranteModel>
-	 * listarApenasNome() {
-	 * 
-	 * // List<Restaurante> restaurantes = restauranteRepository.findAll();
-	 * 
-	 * return listar();
-	 * 
-	 * }
-	 */
+	@JsonView(RestauranteView.Resumo.class)
 
 	@GetMapping()
-	public MappingJacksonValue listar(@RequestParam(required = false) String projecao) {
+	public List<RestauranteModel> listar() {
 
-		List<Restaurante> restaurantes = restauranteRepository.findAll();
+		// List<Restaurante> restaurantes = restauranteRepository.findAll();
 
-		List<RestauranteModel> restauranteModel = restauranteAssembler.toCollectionModel(restaurantes);
-
-		MappingJacksonValue restauranteWrapper = new MappingJacksonValue(restauranteModel);
-
-		restauranteWrapper.setSerializationView(RestauranteView.Resumo.class);
-
-		if ("apenas-nome".equals(projecao)) {
-			restauranteWrapper.setSerializationView(RestauranteView.ApenasNome.class);
-		} else if ("completo".equals(projecao)) {
-			restauranteWrapper.setSerializationView(null);
-		}
-
-		return restauranteWrapper;
-
-		// return toCollectionModel(restauranteRepository.findAll());
+		return toCollectionModel(restauranteRepository.findAll());
 
 	}
 
-	// Como fazer dinamicamente
+	@JsonView(RestauranteView.ApenasNome.class)
+
+	@GetMapping(params = "projecao=apenas-nome")
+	public List<RestauranteModel> listarApenasNome() {
+
+		// List<Restaurante> restaurantes = restauranteRepository.findAll();
+
+		return listar();
+
+	}
+
+	/*
+	 * // Como fazer dinamicamente
+	 * 
+	 * @GetMapping() public MappingJacksonValue listar(@RequestParam(required =
+	 * false) String projecao) {
+	 * 
+	 * List<Restaurante> restaurantes = restauranteRepository.findAll();
+	 * 
+	 * List<RestauranteModel> restauranteModel =
+	 * restauranteAssembler.toCollectionModel(restaurantes);
+	 * 
+	 * MappingJacksonValue restauranteWrapper = new
+	 * MappingJacksonValue(restauranteModel);
+	 * 
+	 * restauranteWrapper.setSerializationView(RestauranteView.Resumo.class);
+	 * 
+	 * if ("apenas-nome".equals(projecao)) {
+	 * restauranteWrapper.setSerializationView(RestauranteView.ApenasNome.class); }
+	 * else if ("completo".equals(projecao)) {
+	 * restauranteWrapper.setSerializationView(null); }
+	 * 
+	 * return restauranteWrapper;
+	 * 
+	 * // return toCollectionModel(restauranteRepository.findAll());
+	 * 
+	 * }
+	 */
 
 	@GetMapping("/{restauranteId}")
 	public RestauranteModel buscar(@PathVariable("restauranteId") Long id) {
