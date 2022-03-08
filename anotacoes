@@ -959,6 +959,36 @@ DTO ou JsonView
 
 É uma biblioteca de terceiro 
 
+13.6. Implementando pesquisas complexas na API --> Voltar e fazer esse cara 
+
+13.7. Tratando BindException ao enviar parâmetros de URL inválidos
+
+Voltar e fazer esse cara 
+
+
+13.8. Implementando paginação e ordenação em recursos de coleção da API 
+
+--> Tiver tempo voltar para esse capitulo 
+
+18.1 
+
+18.2. Conhecendo a OpenAPI (antes conhecida como Swagger)
+--> Open API specification
+--> O que é Swagger
+	1) 
+
+18.3. Gerando a definição OpenAPI em JSON com SpringFox
+
+18.5. Selecionando os endpoints da API para gerar a documentação
+
+
+
+
+
+
+
+
+
 
 
 

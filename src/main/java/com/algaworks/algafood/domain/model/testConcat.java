@@ -1,5 +1,8 @@
 package com.algaworks.algafood.domain.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class testConcat {
 	
 	
@@ -13,7 +16,9 @@ public class testConcat {
 		
 	    System.out.println("valor do concat" + teste);
 	    
-	    
+List<String> teste2 =  new ArrayList<String>();
+		
+		teste2.stream();
 		
 		
 	}
