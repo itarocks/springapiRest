@@ -20,11 +20,11 @@ public class BuscaCozinhaMain {
 		
 		CozinhaRepository cozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
 		
-		Cozinha cozinha = cozinhaRepository.buscar(2L);
-		
-		
-		System.out.println("O Valor da cozinha é: " +  cozinha.getNome());
-		
+//		Cozinha cozinha = cozinhaRepository.buscar(2L);
+//
+//
+//		System.out.println("O Valor da cozinha é: " +  cozinha.getNome());
+//
 	
 	}
 

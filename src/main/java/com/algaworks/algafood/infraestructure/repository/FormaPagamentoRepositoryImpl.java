@@ -18,9 +18,10 @@ import com.algaworks.algafood.domain.repository.CozinhaRepository;
 import com.algaworks.algafood.domain.repository.FormaPagamentoRepository;
 
 @Component
-public class FormaPagamentoRepositoryImpl implements FormaPagamentoRepository {
+//public class FormaPagamentoRepositoryImpl implements FormaPagamentoRepository {
+	public class FormaPagamentoRepositoryImpl {
 
-	
+
 	private EntityManager manager;
 
 	public List<FormaPagamento> listar() {

@@ -22,12 +22,12 @@ public class ConsultaRestauranteMain {
 		
 		RestauranteRepository restauranteRepository = applicationContext.getBean(RestauranteRepository.class);
 		
-		List<Restaurante> restaurantes = restauranteRepository.listar();
-		
-		for(Restaurante restaurante : restaurantes) {
-			
-			System.out.println("o nome da restaurante + : " + restaurante.getNome());
-		}
+//		List<Restaurante> restaurantes = restauranteRepository.listar();
+//
+//		for(Restaurante restaurante : restaurantes) {
+//
+//			System.out.println("o nome da restaurante + : " + restaurante.getNome());
+//		}
 		
 		
 	

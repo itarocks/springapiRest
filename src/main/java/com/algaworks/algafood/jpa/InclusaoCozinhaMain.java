@@ -26,8 +26,8 @@ public class InclusaoCozinhaMain {
 		Cozinha cozinha2 = new Cozinha();
 		cozinha2.setNome("Japonesa");
 		
-		cozinha1 = cozinhaRepository.salvar(cozinha1);
-		cozinha2 = cozinhaRepository.salvar(cozinha2);
+//		cozinha1 = cozinhaRepository.salvar(cozinha1);
+//		cozinha2 = cozinhaRepository.salvar(cozinha2);
 		
 		System.out.println(cozinha1.getId() + " " + cozinha1.getNome());
 		System.out.println(cozinha2.getId() + " " + cozinha2.getNome());

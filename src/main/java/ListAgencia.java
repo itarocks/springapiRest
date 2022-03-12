@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListAgencia {
-	
+
 	Long agencia;
 
 	public Long getAgencia() {
@@ -12,8 +12,6 @@ public class ListAgencia {
 	public void setAgencia(Long agencia) {
 		this.agencia = agencia;
 	}
-
-	
 	List<Long> agencias;
 
 	public List<Long> getAgencias() {
@@ -23,9 +21,5 @@ public class ListAgencia {
 	public void setAgencias(List<Long> agencias) {
 		this.agencias = agencias;
 	}
-	
-	
-	
-	}
 
-
+}

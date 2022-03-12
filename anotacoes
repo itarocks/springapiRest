@@ -945,6 +945,8 @@ Fazer essa aula novamente
 12.7. Refatorando serviço de cadastro de restaurante para incluir endereço
 
 
+Voltar e fazer todo esse modulo 13 
+
 13.1. Fazendo projeção de recursos com @JsonView do Jackson
 
 --> MappingJacksonValue é uma classe wrapper 
@@ -968,6 +970,17 @@ Voltar e fazer esse cara
 
 13.8. Implementando paginação e ordenação em recursos de coleção da API 
 
+14.1. Conhecendo soluções para upload de arquivos em REST APIs
+
+Solucoes
+1) Com base 64,  com application
+2) multipart/form-data
+
+
+
+
+
+
 --> Tiver tempo voltar para esse capitulo 
 
 18.1 
@@ -981,6 +994,11 @@ Voltar e fazer esse cara
 
 18.5. Selecionando os endpoints da API para gerar a documentação
 
+18.6. Descrevendo informações da API na documentação
+
+19.1. Introdução à Discoverability e HATEOAS
+
+19.2. Adicionando a URI do recurso criado no header da resposta
 
 
 
